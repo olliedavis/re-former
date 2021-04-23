@@ -1,0 +1,16 @@
+  <h1>Edit User:</h1>
+<%= form_with model: @user, method:"patch" do |form|  %>
+  <%= form.label "Username" %>
+  <br>
+  <%= form.text_field :username, placeholder: "John Doe" %>
+  <br>
+   <%= form.label "Email" %>
+  <br>
+  <%= form.text_field :email, placeholder: "email@domain.com" %>
+  <br>
+  <%= form.label "Password" %>
+  <br>
+  <%= form.password_field :password, placeholder: "Secure Password" %>
+  <br>
+  <%= form.submit "Update" %>
+  <% end %>
