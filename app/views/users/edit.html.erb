@@ -13,4 +13,14 @@
   <%= form.password_field :password, placeholder: "Secure Password" %>
   <br>
   <%= form.submit "Update" %>
+  <br>
+   <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <ul>
+          <%= message %>
+        </ul>
+      <% end %>
+    </ul>
   <% end %>
+<% end %>
